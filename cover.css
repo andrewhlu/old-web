@@ -2,6 +2,8 @@
  * Globals
  */
 
+ @import url('https://fonts.googleapis.com/css?family=PT+Sans|Shadows+Into+Light+Two');
+
 /* Links */
 a,
 a:focus,
@@ -28,11 +30,26 @@ html,
 body {
   height: 100%;
   background-color: #333;
+  background: url(https://andrewhlu.github.io/sf-resized.jpg) no-repeat center center fixed;
 }
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+h1 {
+  font-size: 400%;
+  font-family: "Shadows Into Light Two", sans-serif;
+}
+
+h2 {
+  font-size: 200%;
+  font-family: "PT Sans", sans-serif;
+}
+
+p {
+  font-size: 100%;
+  font-family: "PT Sans", sans-serif;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -152,9 +169,13 @@ body {
 }
 
 @media (min-width: 62em) {
+  body{
+    text-align: right;
+  }
+
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 42rem;
+    width: 62rem;
   }
 }
