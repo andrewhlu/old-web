@@ -44,11 +44,13 @@ function ScavengerHunt() {
   this.signInButton = document.getElementById('sign-in');
   this.signOutButton = document.getElementById('sign-out');
   // this.signInSnackbar = document.getElementById('must-signin-snackbar');
+  this.captureImageLink = document.getElementById('captureImageLink');
 
   // Saves message on form submit.
   //this.messageForm.addEventListener('submit', this.saveMessage.bind(this));
   this.signOutButton.addEventListener('click', this.signOut.bind(this));
   this.signInButton.addEventListener('click', this.signIn.bind(this));
+  this.captureImageLink.addEventListener('click', this.captureImage.bind(this));
 
   // Toggle for the button.
   // var buttonTogglingHandler = this.toggleButton.bind(this);
