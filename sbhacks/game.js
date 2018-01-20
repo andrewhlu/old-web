@@ -76,6 +76,16 @@ function ScavengerHunt() {
   this.initFirebase();
 }
 
+// Checks that the Firebase SDK has been correctly setup and configured.
+ScavengerHunt.prototype.checkSetup = function() {
+  if (!window.firebase || !(firebase.app instanceof Function) || !firebase.app().options) {
+    window.alert('You have not configured and imported the Firebase SDK. ' +
+        'Make sure you go through the codelab setup instructions and make ' +
+        'sure you are running the codelab using `firebase serve`');
+  }
+};
+
+
 ScavengerHunt.prototype.initFirebase = function() {
   // TODO(DEVELOPER): Initialize Firebase.
   //Shortcuts to Firebase SDK features
