@@ -161,6 +161,8 @@ ScavengerHunt.prototype.captureImage = function() {
     var currentUser = this.auth.currentUser;
 
 	// Upload Data URL string to Firebase
+	var storageRef = firebase.storage().ref(); //Root Reference
+
 	ref.putString(imagelink, 'data_url').then(function(snapshot) {
 	  console.log('Uploaded a data_url string!');
 	});
