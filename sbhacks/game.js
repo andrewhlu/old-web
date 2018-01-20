@@ -85,7 +85,6 @@ ScavengerHunt.prototype.checkSetup = function() {
   }
 };
 
-
 ScavengerHunt.prototype.initFirebase = function() {
   // TODO(DEVELOPER): Initialize Firebase.
   //Shortcuts to Firebase SDK features
