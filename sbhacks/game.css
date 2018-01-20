@@ -20,5 +20,6 @@ body {
 }
 
 #user-name {
+	margin-right: 10px;
 	color: white;
 }
