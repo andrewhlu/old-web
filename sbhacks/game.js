@@ -5,8 +5,8 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 if (navigator.getUserMedia) {
 	var constraints = {
 		video: {
-			width: {min: 1280},
-            height: {min: 720},
+			width: 1080,
+            height: 1920,
 			facingMode: "environment"
 		}
 	};
@@ -31,3 +31,16 @@ function captureImage() {
     var imagelink = newimage.toDataURL("image/png");
     console.log(imagelink);
 }
+
+//Firebase Auth
+FriendlyChat.prototype.initFirebase = function() {
+  // TODO(DEVELOPER): Initialize Firebase.
+  //Shortcuts to Firebase SDK features
+  this.auth = firebase.auth();
+  this.database = firebase.database();
+  this.storage = firebase.storage();
+  //Initiates Firebase auth and listen to auth state changes.
+  this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
+};
+
+this.initFirebase();
