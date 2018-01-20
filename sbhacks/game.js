@@ -50,15 +50,15 @@ function ScavengerHunt() {
   // this.submitImageButton = document.getElementById('submitImage');
   // this.imageForm = document.getElementById('image-form');
   // this.mediaCapture = document.getElementById('mediaCapture');
-  // this.userPic = document.getElementById('user-pic');
-  // this.userName = document.getElementById('user-name');
-   this.signInButton = document.getElementById('sign-in');
-  // this.signOutButton = document.getElementById('sign-out');
+  this.userPic = document.getElementById('user-pic');
+  this.userName = document.getElementById('user-name');
+  this.signInButton = document.getElementById('sign-in');
+  this.signOutButton = document.getElementById('sign-out');
   // this.signInSnackbar = document.getElementById('must-signin-snackbar');
 
   // Saves message on form submit.
   //this.messageForm.addEventListener('submit', this.saveMessage.bind(this));
-  //this.signOutButton.addEventListener('click', this.signOut.bind(this));
+  this.signOutButton.addEventListener('click', this.signOut.bind(this));
   this.signInButton.addEventListener('click', this.signIn.bind(this));
 
   // Toggle for the button.
@@ -102,3 +102,41 @@ ScavengerHunt.prototype.signIn = function() {
   this.auth.signInWithPopup(provider);
 };
 
+ScavengerHunt.prototype.signOut = function() {
+  // TODO(DEVELOPER): Sign out of Firebase.
+  this.auth.signOut();
+};
+
+ScavengerHunt.prototype.onAuthStateChanged = function(user) {
+  if (user) { // User is signed in!
+    // Get profile pic and user's name from the Firebase user object.
+    var profilePicUrl = user.photoURL;   // TODO(DEVELOPER): Get profile pic.
+    var userName = user.displayName;        // TODO(DEVELOPER): Get user's name.
+
+    // Set the user's profile pic and name.
+    this.userPic.style.backgroundImage = 'url(' + profilePicUrl + ')';
+    this.userName.textContent = "Hi, " + userName + "!";
+
+    // Show user's profile and sign-out button.
+    this.userName.removeAttribute('hidden');
+    this.userPic.removeAttribute('hidden');
+    this.signOutButton.removeAttribute('hidden');
+
+    // Hide sign-in button.
+    this.signInButton.setAttribute('hidden', 'true');
+
+    // We load currently existing chant messages.
+    this.loadMessages();
+
+    // We save the Firebase Messaging Device token and enable notifications.
+    this.saveMessagingDeviceToken();
+  } else { // User is signed out!
+    // Hide user's profile and sign-out button.
+    this.userName.setAttribute('hidden', 'true');
+    this.userPic.setAttribute('hidden', 'true');
+    this.signOutButton.setAttribute('hidden', 'true');
+
+    // Show sign-in button.
+    this.signInButton.removeAttribute('hidden');
+  }
+};
