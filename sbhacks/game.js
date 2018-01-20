@@ -36,6 +36,7 @@ function captureImage() {
     var newimage = document.getElementById("videoshot");
     var imagelink = newimage.toDataURL("image/png");
     console.log(imagelink);
+    this.uploadImage(imagelink);
 }
 
 //Firebase Initialization
@@ -150,4 +151,19 @@ ScavengerHunt.prototype.checkSignedInWithMessage = function() {
   //this.signInSnackbar.MaterialSnackbar.showSnackbar(data);
   console.log(data);
   return false;
+};
+
+FriendlyChat.prototype.uploadImage = function(imageurl) {
+  // Check if the user is signed-in
+  if (this.checkSignedInWithMessage()) {
+
+    // TODO(DEVELOPER): Upload image to Firebase storage and add message.
+    // We add a message with a loading icon that will get updated with the shared image.
+    var currentUser = this.auth.currentUser;
+
+	// Upload Data URL string to Firebase
+	ref.putString(imageurl, 'data_url').then(function(snapshot) {
+	  console.log('Uploaded a data_url string!');
+	});
+  }
 };
