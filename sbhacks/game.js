@@ -1,3 +1,9 @@
+//Initialize ScavengerHunt function on startup
+window.onload = function() {
+  window.ScavengerHunt = new ScavengerHunt();
+};
+
+//Camera Feed
 var video = document.querySelector("#videoElement");
  
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
