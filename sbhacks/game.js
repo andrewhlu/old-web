@@ -144,7 +144,19 @@ ScavengerHunt.prototype.checkSignedInWithMessage = function() {
 };
 
 ScavengerHunt.prototype.captureImage = function() {
+	//Get image canvas size
+	var v = document.getElementById("myVideo");
+	v.addEventListener( "loadedmetadata", function (e) {
+	    var vwidth = this.videoWidth,
+	        vheight = this.videoHeight;
+	}, false );
+
+	//Set new canvas size
 	var image = document.getElementById("videoshot");
+	image.width  = vwidth; // in pixels
+	image.height = vheight; // in pixels
+
+	//Capture Image	
 	var imagecontext = image.getContext("2d");
     var videoelement = document.getElementById("videoElement");
     imagecontext.drawImage(videoelement, 0, 0);
