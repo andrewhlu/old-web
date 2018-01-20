@@ -91,3 +91,4 @@ ScavengerHunt.prototype.signIn = function() {
   var provider = new firebase.auth.GoogleAuthProvider();
   this.auth.signInWithPopup(provider);
 };
+
