@@ -18,3 +18,11 @@ function handleVideo(stream) {
 function videoError(e) {
     console.log("fail");
 }
+
+//Capture Image Script
+function captureImage() {
+	var image = document.getElementById("videoshot");
+	var imagecontext = image.getContext("2d");
+    var videoelement = document.getElementById("videoElement");
+    ctx.drawImage(img, 0, 0);
+}
