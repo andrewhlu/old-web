@@ -27,18 +27,6 @@ function videoError(e) {
     console.log("Video stream failed to start.");
 }
 
-//Capture Image Script
-function captureImage() {
-	var image = document.getElementById("videoshot");
-	var imagecontext = image.getContext("2d");
-    var videoelement = document.getElementById("videoElement");
-    imagecontext.drawImage(videoelement, 0, 0);
-    var newimage = document.getElementById("videoshot");
-    var imagelink = newimage.toDataURL("image/png");
-    console.log(imagelink);
-    ScavengerHunt.prototype.uploadImage(imagelink);
-}
-
 //Firebase Initialization
 function ScavengerHunt() {
   this.checkSetup();
@@ -153,7 +141,16 @@ ScavengerHunt.prototype.checkSignedInWithMessage = function() {
   return false;
 };
 
-ScavengerHunt.prototype.uploadImage = function(imageurl) {
+ScavengerHunt.prototype.captureImage = function() {
+	var image = document.getElementById("videoshot");
+	var imagecontext = image.getContext("2d");
+    var videoelement = document.getElementById("videoElement");
+    imagecontext.drawImage(videoelement, 0, 0);
+    var newimage = document.getElementById("videoshot");
+    console.log("test 1")
+    var imagelink = newimage.toDataURL("image/png");
+    console.log("test 2");
+
   // Check if the user is signed-in
   if (this.checkSignedInWithMessage()) {
 
@@ -162,7 +159,7 @@ ScavengerHunt.prototype.uploadImage = function(imageurl) {
     var currentUser = this.auth.currentUser;
 
 	// Upload Data URL string to Firebase
-	ref.putString(imageurl, 'data_url').then(function(snapshot) {
+	ref.putString(imagelink, 'data_url').then(function(snapshot) {
 	  console.log('Uploaded a data_url string!');
 	});
   }
