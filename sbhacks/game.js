@@ -36,7 +36,7 @@ function captureImage() {
     var newimage = document.getElementById("videoshot");
     var imagelink = newimage.toDataURL("image/png");
     console.log(imagelink);
-    this.uploadImage(imagelink);
+    ScavengerHunt.prototype.uploadImage(imagelink);
 }
 
 //Firebase Initialization
