@@ -124,12 +124,7 @@ ScavengerHunt.prototype.onAuthStateChanged = function(user) {
 
     // Hide sign-in button.
     this.signInButton.setAttribute('hidden', 'true');
-
-    // We load currently existing chant messages.
-    this.loadMessages();
-
-    // We save the Firebase Messaging Device token and enable notifications.
-    this.saveMessagingDeviceToken();
+    
   } else { // User is signed out!
     // Hide user's profile and sign-out button.
     this.userName.setAttribute('hidden', 'true');
@@ -139,4 +134,21 @@ ScavengerHunt.prototype.onAuthStateChanged = function(user) {
     // Show sign-in button.
     this.signInButton.removeAttribute('hidden');
   }
+};
+
+ScavengerHunt.prototype.checkSignedInWithMessage = function() {
+  /* TODO(DEVELOPER): Check if user is signed-in Firebase. */
+  //Return true if the user is signed in Firebase
+  if (this.auth.currentUser) {
+    return true;
+  }
+
+  // Display a message to the user using a Toast.
+  var data = {
+    message: 'You must sign-in first',
+    timeout: 2000
+  };
+  //this.signInSnackbar.MaterialSnackbar.showSnackbar(data);
+  console.log(data);
+  return false;
 };
