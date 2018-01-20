@@ -115,7 +115,7 @@ ScavengerHunt.prototype.onAuthStateChanged = function(user) {
 
     // Set the user's profile pic and name.
     this.userPic.style.backgroundImage = 'url(' + profilePicUrl + ')';
-    this.userName.textContent = "Hi, " + userName + "!";
+    this.userName.textContent = "Hi, " + userName + "!  ";
 
     // Show user's profile and sign-out button.
     this.userName.removeAttribute('hidden');
@@ -124,7 +124,7 @@ ScavengerHunt.prototype.onAuthStateChanged = function(user) {
 
     // Hide sign-in button.
     this.signInButton.setAttribute('hidden', 'true');
-    
+
   } else { // User is signed out!
     // Hide user's profile and sign-out button.
     this.userName.setAttribute('hidden', 'true');
