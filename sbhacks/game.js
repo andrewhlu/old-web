@@ -4,7 +4,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
  
 if (navigator.getUserMedia) {
 	var constraints = {
-		//video: true,
+		video: true,
 		facingMode: "environment"
 	};
     navigator.getUserMedia(constraints, handleVideo, videoError);
