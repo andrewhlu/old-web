@@ -5,8 +5,8 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia 
 if (navigator.getUserMedia) {
 	var constraints = {
 		video: {
-			width: 1080,
-            height: 1920,
+			width: {min: 1280},
+            height: {min: 720},
 			facingMode: "environment"
 		}
 	};
