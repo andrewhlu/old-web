@@ -25,6 +25,7 @@ function captureImage() {
 	var imagecontext = image.getContext("2d");
     var videoelement = document.getElementById("videoElement");
     imagecontext.drawImage(videoelement, 0, 0);
-    var imagelink = imagecontext.toDataURL("image/png");
+    var newimage = document.getElementById("videoshot");
+    var imagelink = newimage.toDataURL("image/png");
     console.log(imageLink);
 }
