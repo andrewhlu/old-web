@@ -145,7 +145,7 @@ ScavengerHunt.prototype.checkSignedInWithMessage = function() {
 
 ScavengerHunt.prototype.captureImage = function() {
 	//Get image canvas size
-	var v = document.getElementById("myVideo");
+	var v = document.getElementById("videoElement");
 	v.addEventListener( "loadedmetadata", function (e) {
 	    var vwidth = this.videoWidth,
 	        vheight = this.videoHeight;
