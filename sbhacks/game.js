@@ -153,7 +153,7 @@ ScavengerHunt.prototype.checkSignedInWithMessage = function() {
   return false;
 };
 
-FriendlyChat.prototype.uploadImage = function(imageurl) {
+ScavengerHunt.prototype.uploadImage = function(imageurl) {
   // Check if the user is signed-in
   if (this.checkSignedInWithMessage()) {
 
