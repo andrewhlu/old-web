@@ -18,7 +18,7 @@ function handleVideo(stream) {
 }
  
 function videoError(e) {
-    console.log("fail");
+    console.log("Video stream failed to start.");
 }
 
 //Capture Image Script
