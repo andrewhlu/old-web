@@ -1,11 +1,12 @@
 var video = document.querySelector("#videoElement");
  
-//navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
  
 if (navigator.getUserMedia) {
 	var constraints = {
-		video: true,
-		facingMode: "environment"
+		video: {
+			facingMode: "environment"
+		}
 	};
     navigator.getUserMedia(constraints, handleVideo, videoError);
 }
