@@ -1,0 +1,25 @@
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  /*padding: 3rem 1.5rem;*/
+  text-align: center;
+}
+
+#container {
+  margin: 0px auto;
+  width: 500px;
+  height: 375px;
+  border: 10px #333 solid;
+}
+#videoElement {
+  float: left;
+  width: 100%;
+  height: auto;
+  background-color: #666;
+}
+
+#user-name {
+	margin-right: 10px;
+	color: white;
+}
