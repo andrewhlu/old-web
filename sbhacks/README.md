@@ -1,4 +1,4 @@
-#ScaVision Hunt
+# ScaVision Hunt
 
 [View the new ScaVision Hunt repository](https://github.com/andrewhlu/ScaVision-Hunt)
 
