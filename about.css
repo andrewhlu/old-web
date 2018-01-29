@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Scope+One');
+
 :root {
   --jumbotron-padding-y: 3rem;
 }
@@ -7,7 +9,7 @@
   padding-bottom: var(--jumbotron-padding-y);
   margin-bottom: 0;
   background-color: #fff;
-  background: url(https://andrewhlu.github.io/images/sf.jpg) no-repeat center center fixed;
+  background: url(https://andrewhlu.github.io/images/sf.jpg) no-repeat center center;
 }
 @media (min-width: 768px) {
   .jumbotron {
