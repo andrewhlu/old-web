@@ -4,6 +4,10 @@
   --jumbotron-padding-y: 3rem;
 }
 
+.header-name {
+  font-family: 'Scope One', serif;
+}
+
 .jumbotron {
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
