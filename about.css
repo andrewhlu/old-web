@@ -7,7 +7,7 @@
 
 /*Bootstrap Theme CSS*/
 :root {
-  --jumbotron-padding-y: 5rem;
+  --jumbotron-padding-y: 4rem;
 }
 
 .jumbotron {
@@ -15,7 +15,7 @@
   padding-bottom: var(--jumbotron-padding-y);
   margin-bottom: 0;
   background-color: #fff;
-  background: url(https://andrewhlu.github.io/images/sf.jpg) no-repeat center center;
+  background: url(https://andrewhlu.github.io/images/goletabeachpark.jpg) no-repeat center center;
 }
 @media (min-width: 768px) {
   .jumbotron {
