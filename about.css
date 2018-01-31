@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Scope+One');
 
-:root {
-  --jumbotron-padding-y: 3rem;
-}
-
+/* Custom CSS */
 .header-name {
   font-family: 'Scope One', serif;
+}
+
+/*Bootstrap Theme CSS*/
+:root {
+  --jumbotron-padding-y: 5rem;
 }
 
 .jumbotron {
