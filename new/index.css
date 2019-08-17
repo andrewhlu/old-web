@@ -1,0 +1,136 @@
+/* Custom Fonts */
+@font-face {
+	font-family: Avenir;
+	src: url("fonts/AvenirLTStd-Light.otf") format("opentype");
+}
+
+@font-face {
+	font-family: Avenir;
+	font-weight: bold;
+	src: url("fonts/AvenirLTStd-Black.otf") format("opentype");
+}
+
+@font-face {
+	font-family: Produkt;
+	src: url("fonts/Produkt-Light.otf") format("opentype");
+}
+
+/* Text Highlighting */
+::selection {
+  background: #3894ff; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #3894ff; /* Gecko Browsers */
+}
+
+/* Global CSS */
+body {
+	margin: 0px;
+	font-family: 'Avenir', sans-serif;
+	background: #87ceeb;
+}
+
+h1 {
+	font-family: 'Produkt', sans-serif;
+	font-weight: normal;
+	font-size: 40px;
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 20px;
+}
+
+/* Class CSS */
+.welcome {
+	padding-top: 60px;
+	background: linear-gradient(to bottom, #3894ff 0%,#87ceeb 100%);
+	text-align: center;
+}
+
+.welcome-text {
+	margin: auto;
+	width: 80%;
+}
+
+.welcome h2 {
+	padding-top: 10px;
+}
+
+.welcome a {
+	color: #000;
+}
+
+/* Profile Picture Rounded Image Class */
+.rounded-circle {
+	border-radius: 50%;
+}
+
+.container {
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.container .button {
+	margin: 10px;
+}
+
+.button {
+	margin-top: 20px;
+	width: 200px;
+	height: 50px;
+	border: 2px solid #3894ff;
+	font-size: 15px;
+	font-family: "Avenir";
+	padding: 8px 12px;
+	border-radius: 6px;
+	box-shadow: none;
+}
+
+.projects {
+	margin: auto;
+	width: 80%;
+}
+
+.projects h1 {
+	text-align: center;
+}
+
+@media only screen and (min-width: 1500px) {
+	.welcome-text {
+		width: 1200px;
+	}
+
+	.projects {
+		width: 1200px;
+	}
+}
+
+.project-card {
+	margin: 10px;
+	width: 360px;
+	height: 380px;
+	border: 2px solid #000;
+	border-radius: 10px;
+	background: #f1f1f1;
+}
+
+.project-card h2, p {
+	margin: 0px;
+	padding: 10px;
+}
+
+.project-card h2 {
+	font-weight: bold;
+	text-align: center;
+}
+
+.project-card img {
+	width: 360px;
+	height: 200px;
+	border-radius: 10px 10px 0px 0px;
+}

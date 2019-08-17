@@ -17,6 +17,7 @@
   background-color: #fff;
   background: url(https://andrewhlu.github.io/images/goletabeachpark.jpg) no-repeat center center;
 }
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: calc(var(--jumbotron-padding-y) * 2);
